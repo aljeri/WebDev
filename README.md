@@ -11,8 +11,7 @@
 3. Web Application Frameworks<br>
    3.1. NodeJS (backend)<br>
    3.2. express.js (backend)<br>
-   3.3. Django (backend)<br>
-   3.4. React (frontend)
+   3.3. React (frontend)
 4. Web Databases<br>
    4.1. CRUD operations for a web app<br>
    4.2. MongoDB
