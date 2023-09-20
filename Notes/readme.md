@@ -9,3 +9,5 @@
          <li> <a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">npm Intellisense </a></li>
 <li>  ..</li>
   </ul></li>
+
+<b>Slides are divided based on each topic</b>
