@@ -11,3 +11,8 @@
   </ul></li>
 
 <b>Slides are divided based on each topic</b>
+
+<ul>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties"> A Complete Guide to Flexbox
+  </a></li>
+</ul>
