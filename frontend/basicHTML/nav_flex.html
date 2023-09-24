@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /*this style covers all aspects of the html documents*/
+            /* works as global style definitino */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        body {
+            background-color:grey;
+            color: white;
+        }
+        header {
+            text-align: center;
+        }
+        /* 2nd way to use flexbox */
+        /*This makes the <nav> element a flex container, and 
+            its immediate children (in this case, the <ul>) become flex items.*/
+        nav {
+            height: 40px;
+            background-color: cadetblue;
+            display: flex;
+            align-items: center;
+
+        }
+        nav ul{
+            padding-left:10px;
+            margin:0;
+            display: flex;
+        }
+        /*align-content/items: center;*/ /*this align content on y-axis*/
+        /*justify-content: center ; */ /*this align content on (main) x-axis*/        
+        nav li{
+            list-style: none;
+            margin-right:10px;
+            
+        }
+        li a {
+            text-decoration: none;
+            color:white;
+        }
+        .rightside { /*this will make contact us goes to the rightside of the flexbox*/
+            margin-left: auto;
+        }
+        img {
+            width:200px;
+            float: left;
+            padding-right: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- this is a comment-->
+    <!-- we will work on block, grid, and flexbox-->
+
+    <header> <!-- styling mainly focuses on position and alignment-->
+        <h1> My Page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <ul class="rightside">
+                <li><a href=""> Contact Us</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <h3>My article</h3>
+        <img src="img/img.avif">
+        <p>Aliquip aliquip sunt sit consequat ut id amet velit excepteur fugiat 
+            ullamco deserunt labore reprehenderit. Sunt sint dolor quis non officia 
+            adipisicing magna sint sunt nulla non nostrud do mollit. Et velit deserunt
+             duis nisi voluptate <span style="color:red">xea do eiusmod ea deserunt magna incididunt commodo 
+             ullamco. Nostrud proident nulla magna velit id</span>s tempor velit sit aliqua 
+             duis est deserunt. Deserunt sit voluptate eiusmod aliqua anim consequat 
+             sint aute cupidatat dolore. Sint elit anim reprehenderit ipsum adipisicing 
+             amet velit ut minim qui do ad consequat.</p>
+        
+        <div style="clear: both;"></div> <!-- this helps clear any float style above it-->
+        <h3>Article 2</h3>
+        <p>Occaecat reprehenderit sint magna mollit fugiat consequat nulla enim fugiat 
+            exercitation qui. Exercitation sunt dolore sunt ullamco laboris nostrud 
+            pariatur voluptate eu. Ullamco aute ut laboris ex mollit qui.</p>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright &copy; 2023.</p>
+    </footer>
+</body>
+</html>
