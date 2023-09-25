@@ -1,3 +1,5 @@
+<b>Slides are divided based on each topic</b>
+
 <b>Tools:</b><br>
 <ul>
   <li>Download VSCode from <a href="https://code.visualstudio.com/ ">here</a>  </li>
@@ -8,10 +10,10 @@
      <li> <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server </a></li>
          <li> <a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">npm Intellisense </a></li>
 <li>  ..</li>
-  </ul></li>
-
-<b>Slides are divided based on each topic</b>
-
+  </ul>
+  </li>
+</ul>
+<b>Useful articles:</b><br>
 <ul>
   <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties"> A Complete Guide to Flexbox
   </a></li>
