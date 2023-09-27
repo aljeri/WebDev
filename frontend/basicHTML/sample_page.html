@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png">
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+        }
+        body {
+            background:#666;
+			color:#fff;
+            
+        }
+        header {
+            display: grid;
+            /*padding: 5px 5px;*/
+           /* align-items: center;*/
+           justify-content: center;
+         /*align-content: center;*/
+         /*text-align: center;*/
+           
+        }
+        .container{
+            max-width:1000px;
+            margin: 1px auto;
+            background-color:black;
+           
+        }
+        a {
+            color:#fff;
+            text-decoration: none;
+        }
+        nav {
+            margin: 0;
+            height:40px;
+            position:sticky;
+            top:0;
+            z-index:100; 
+            background-color:cadetblue;
+        }
+        ul {
+            padding:0;
+        }
+        nav li {
+            list-style:none;
+            padding-right:15px;
+
+        }
+        nav ul {
+            padding-left:10px;
+            padding-top:10px;
+            display: flex;
+        }
+        nav li.right{
+            margin-left: auto;
+        }
+        nav a:hover {
+            color:black;
+            cursor: pointer;
+        }
+        nav img{
+            width: 25px;
+            float:right;
+        }
+        main {
+            min-height: 1000px;
+            padding:0px 20px;
+        }
+        .content {
+            display:flex;
+            background-color:darkgray;
+            height: 300px;
+            flex-flow:  column wrap;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item{
+            width:200px;
+            height:250px;
+            background-color:cadetblue;
+            text-align: center;
+        }
+        .item2 {
+            width:200px;
+            height:250px;
+            background-color:cadetblue;
+            flex-grow:2;
+
+        }
+        .item h3{
+            text-align: center;
+        }
+        .item img{
+            border-radius: 50%;
+            width:100px;
+            height:100px;
+            object-fit: cover;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1> My Page</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li class="right"><a href="#"><img src="img/twitter.png"></a></li>
+            </ul>
+        </nav>
+    <main>
+        <h3>Some Article</h3>
+        <img style="float:left; padding-right:10px" src="/img/img.avif" width="200px">
+        <p align="justify">Proident ut excepteur anim enim cupidatat ad ut
+            ipsum laboris non et pariatur. Eiusmod minim 
+            deserunt adipisicing quis consectetur nulla 
+            pariatur adipisicing commodo pariatur aliquip 
+            ut amet labore. <span style="color:blue;">Duis amet id reprehenderit 
+            labore ut enim aliquip in consectetur anim</span> sunt
+             eiusmod cillum. Laboris adipisicing commodo incididunt
+             deserunt nisi reprehenderit officia velit. Exercitation
+             tempor adipisicing aliqua ea voluptate veniam aute. 
+             In eiusmod dolore ad ea sint quis nulla elit sit aute 
+             cillum id pariatur. Non dolore aute eiusmod sint quis 
+             in est proident anim reprehenderit.</p>
+        <!-- Commnet here-->
+        <h3 title="this is the title of paragraph ">Article 2</h3>
+        <p align="justify">Proident ut excepteur anim enim cupidatat ad ut
+            ipsum laboris non et pariatur. Eiusmod minim 
+            deserunt adipisicing quis consectetur nulla 
+            pariatur adipisicing commodo pariatur aliquip 
+            ut amet labore. Duis amet id reprehenderit 
+            labore ut enim aliquip in consectetur anim sunt
+             eiusmod cillum. Laboris adipisicing commodo incididunt
+             deserunt nisi reprehenderit officia velit. Exercitation
+             tempor adipisicing aliqua ea voluptate veniam aute. 
+             In eiusmod dolore ad ea sint quis nulla elit sit aute 
+             cillum id pariatur. Non dolore aute eiusmod sint quis 
+             in est proident anim reprehenderit.</p>
+
+        <div class="content">
+            <div class="item">
+                <h3>one</h3>
+                <img src="/img/photo.jpeg">
+                <p>Read more...</p>
+            </div>
+
+            <div class="item">
+                <h3>two</h3>
+                <img src="/img/photo.jpeg">
+                <p>Read more...</p>
+            </div>
+
+            <div class="item">
+                <h3>three</h3>
+                <img src="/img/photo.jpeg">
+                <p>Read more...</p>
+            </div>
+        </div>
+
+        <h3> Contact us</h3>
+        <form action="mailto:aljeri@cs.ku.edu.kw" method="post">
+            <label for="name" >Name: </label><br>
+            <input type="text" id="name" name="name" ><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message</label><br>
+            <textarea placeholder="write something" rows="10" cols="30" type="text" id="message" name="message"></textarea>
+            <br>
+            <label for='selectm'>  Select Option: </label>
+            <br><select name="selectm">
+                <option>one</option>
+                <option>two</option>
+            </select><br>
+            <br>
+            <input type="submit" value="Send">
+            <input type="reset">
+        </form>
+    </main>
+    <footer >
+        <hr>
+      <h4 style="text-align: center;"> Copyright &copy; 2023.</h4> 
+      <br>
+    </footer>
+
+</div>
+</body>
+</html>
