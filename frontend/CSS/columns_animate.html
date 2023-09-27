@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Columns</title>
+	<style>
+		article{
+			column-count:3;
+			column-gap:40px;
+			column-rule: 1px solid coral;
+			transition: all 2s;
+			-webkit-transition: all 2s;
+		}
+
+		article h1{
+			column-span:all;
+		}
+		article:hover{
+			background-color: black;
+			color:white;
+		}
+		#animate {
+			text-align: center;
+			transition: all 2s ;
+			 transition-delay:0.2s; 
+			 -webkit-transition:all 2s ; /* Safari and Chrome */
+			transition-timing-function: linear;
+		}
+		#animate:hover{
+			font-size: 40px;
+			color:#FC0;
+		}
+
+		.textbox1{
+			border:1px solid black;
+			outline: 1px solid red;
+			outline-offset:10px;			
+			padding:20px;
+			width:300px;
+			overflow:auto; /*allows you to create a dynamic textbox*/
+			resize:both; 
+			margin:10px;
+		}
+
+		
+
+		.flex-container{
+			/*margin: auto; */ 
+			display:flex;
+			text-align: center;
+			justify-content: space-around;
+			width:400px;
+			height:250px;
+			background-color:#000000;
+			align-items: center; 
+
+		}
+
+		.flex-item{
+			background-color:lightblue;
+			width:100px;
+			height:100px;
+			margin:10px;
+		}
+
+		.first{
+			order:-1;
+		}
+		.container {
+			width:90%;
+			margin:10px auto;
+		}
+	</style>
+</head>
+<body>
+	<header >
+		<h1 id="animate">My Page</h1>
+	</header>
+	<div class="container">
+	<article>
+		<h1>Article Title</h1>
+		la sem, vitae mattis leo euismod tempor. Donec vitae rutrum tellus, eget ultrices leo. Ut condimentum placerat risus, ut tempus ipsum finibus id. Vivamus at laoreet massa. Curabitur iaculis, sem nec commodo tempus, turpis lacus feugiat lectus, ut maximus ligula velit a purus. Integer quis ultrices enim. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus quam a nunc tristique ullamcorper. Morbi efficitur interdum nisl, eget sollicitudin tortor sollicitudin eget. Aenean tincidunt commodo efficitur. Proin nulla urna, tristique et leo vitae, ultricies tincidunt diam. Praesent rhoncus magna nisi, ac congue nulla ornare sollicitudin. Nam venenatis venenatis metus sed tristique. In hac habitasse platea dictumst. In sit amet molestie tellus. Aliquam tempus ligu
+	</article>
+
+	<br>
+<div class="flex-container">
+	  <div class="flex-item">flex item 1</div>
+	  <div class="flex-item first">flex item 2</div>
+	  <div class="flex-item">flex item 3</div>
+	</div>
+	<br>
+	<div class="textbox1">Text area styling with outline</div>
+
+	
+</div>
+</body>
+</html>
