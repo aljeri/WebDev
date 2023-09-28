@@ -1,0 +1,94 @@
+body{
+	background:#f4f4f4;
+}
+
+.menu{
+	width:600px;
+	position:absolute;
+}
+
+.menu ul{
+	list-style: none;
+}
+
+.menu ul li{
+	background:#f4f4f4;
+	border: 1px solid #b7b7b7;
+	display:block;
+	float:left;
+	font: bold 12px arial;
+	height:40px;
+	line-height:40px;
+	overflow:hidden; /* overflow is clipped -hides child elements*/
+	padding-left:15px;
+	position:absolute; /*is positioned relative to the nearest positioned ancestor */
+	width:135px;
+	box-shadow: 0px 3px 5px #d2d2d2;
+	background: linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e1e1e1 51%, #f6f6f6 100%);
+	/*linear-gradient(direction, color-stop1, color-stop2);*/
+}
+
+.menu ul li:hover{
+	background: linear-gradient(top, #ffffff 0%, #f4f4f4 50%, #ededed 51%, #ffffff 100%);
+}
+
+.menu ul li:first-child{ /*first list item*/
+	border-radius: 20px 0 0 4px; /*change the shape of each edge radius*/
+}
+
+.menu ul li:last-child{
+	border-radius: 0 4px 4px 0;
+}
+
+.menu ul li#b{
+	margin-left:150px; /*push the second list item since its position is absolute*/
+}
+
+.menu ul li#c{
+	margin-left:300px; /*push the last item to not overlap with previous items*/
+}
+
+.menu ul li a{
+
+	text-decoration: none; /*remove default styling of link*/
+	color:#303030;
+}
+
+.menu ul li div{
+	text-align:left;
+	font: normal 11px arial;
+	line-height: 19px;
+	margin: 10px 0;
+}
+
+.menu ul li div a:hover{
+	text-decoration: underline;
+}
+
+.menu ul li div hr{
+	border:none;
+	border-top:1px dotted #a0a0a0;
+	margin:5px 0;
+	width:95%;
+}
+
+.menu ul li:hover:target{
+	padding:0;
+	height:155px;
+	width:200px;
+	padding-left:15px;
+	opacity:.97;
+	transition:height 0.4s ease-in;
+}
+
+.menu ul li#a:hover:target{
+	background:#f0f9ff;
+}
+
+.menu ul li#b:hover:target{
+	background:#ffffd6;
+}
+
+.menu ul li#c:hover:target{
+	background:#f8ffe8;
+}
