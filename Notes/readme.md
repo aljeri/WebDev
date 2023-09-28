@@ -9,7 +9,8 @@
         <li> <a href="https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode">MongoDB for VS Code </a></li>
      <li> <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server </a></li>
          <li> <a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">npm Intellisense </a></li>
-<li>  ..</li>
+<li>  <a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support </li>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=HansUXdev.bootstrap5-snippets">Code snippets for Bootstrap 5</a></li>
   </ul>
   </li>
 </ul>
