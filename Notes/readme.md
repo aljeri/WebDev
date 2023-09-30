@@ -20,4 +20,6 @@
   </a></li>
  <li><a href="https://surewriter.com/"> AI Tool for website content generator</a> </li>
   <li><a href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/"> Bootstrap cheatsheet</a></li>
+<li><a href="https://bootstrap-cheatsheet.themeselection.com"> Bootstrap cheatsheet classes, variables, and mixins</a></li>
+  
 </ul>
