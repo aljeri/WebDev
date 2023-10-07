@@ -83,10 +83,9 @@
             Contact us
           </div>
           <div class="card-body">
+            <form>
         <div class="mb-3">
-          <label for="info" class="form-label">Please fill out this form to contact us
-
-          </label>
+          <label for="info" class="form-label">Please fill out this form to contact us          </label>
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -96,15 +95,16 @@
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="email" placeholder="name@example.com">
         </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
+        <div class=" form-floating mb-3">
           <textarea class="form-control" id="message" rows="3"></textarea>
+          <label for="message" class="form-label">Message</label>
+
         </div>
         <button type="submit" class="btn btn-info">Submit</button>
-
-      </div>
+      </form>
+      </div> <!--card body-->
         </div>
-      </div>
+      </div><!--end of column (form)-->
       <div class="col-md-4">
         <div class="card ">
           <div class="card-body">

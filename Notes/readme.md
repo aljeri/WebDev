@@ -25,4 +25,6 @@
 </ul>
 <ul>
   <li><a href="https://www.figma.com/"> Figma </a></li>
+  <li><a href="https://www.youtube.com/watch?v=c9Wg6Cb_YlU"> UI / UX Design Tutorial – Wireframe, Mockup & Design in Figma </a></li>
+    <li><a href="https://youtu.be/HZuk6Wkx_Eg?si=VdcAj4Hm2H6CwpLN"> Figma Quick Beginners Guide</a></li>
 </ul>

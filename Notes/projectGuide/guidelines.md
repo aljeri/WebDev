@@ -17,7 +17,7 @@ _Objective_: Define the core idea of the project.
 _Objective_: Understand the project's requirements, tools, and frameworks to design its structure.
 
 1.	Information Gathering: Research similar projects or products in the market. Identify what works and potential areas of improvement.
-2.	User Stories: Create user stories to understand the features from an end-user perspective.
+2.	User Stories: Create user stories to understand the features from an end-user perspective. _(important)_
 3.	Wireframing: Design basic wireframes for the project's user interface. Tools like Figma or Sketch can be useful. _(important)_
 4.	Frontend, Backend, and Database Framework: this have already been decided for this course! 
 5.	Additional Tools: Identify any additional tools or APIs needed (e.g., authentication tools, third-party APIs).
