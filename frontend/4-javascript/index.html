@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var visitor = prompt("What is your name?", "");
+    </script>
+   
+</head>
+<body onload="init()">
+
+    <h2 id="header">
+        Custom Greeting
+        <span style="color:red">You</span>
+    </h2>
+    <button onclick="test()">click me</button>
+    <form id="myForm">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" id="name" name="email">
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email">
+		</div>
+		<button type="submit" onclick="submited()">Submit</button>
+	</form>
+
+    <h2>Counter: <span style='color:red' id='count'>0</span></h2>
+    <button class="btn" id='counter' onclick="counter()">Add</button>
+    <button class="btn" id= 'reset' onclick="reset()">reset</button>
+
+    
+    
+    <script src="index.js">
+        
+       
+    </script>
+</body>
+</html>

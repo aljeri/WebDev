@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript | Functions & Events</title>
+</head>
+<body onload="init()">
+	<button ondblclick="getDate()">Get Date</button>
+	<h1 id="showDate"></h1>
+
+	<form id="myForm">
+		<div>
+			<label>Name</label>
+			<input type="text" id="name" onchange="test()">
+		</div>
+		<div>
+			<label>Email</label>
+			<input type="text" id="email">
+		</div>
+		<input type="submit" value="Submit">
+	</form>
+
+
+	<script>
+	/*
+		function sayHello(){
+			alert('Hello');
+		}
+	
+
+		function sayHello(greeting, name = 'Jeff'){
+			alert(greeting+ ' ' +name);
+		}
+
+		sayHello('Hello');
+
+		function getSum(a, b){
+			return a + b;
+		}
+
+		var sum = getSum(4, 5);
+		console.log('The answer is '+getSum(4, 5));
+
+		getDate()	Get the day as a number (1-31)
+		getDay()	Get the weekday as a number (0-6)
+		getFullYear()	Get the four digit year (yyyy)
+		getHours()	Get the hour (0-23)
+		getMilliseconds()	Get the milliseconds (0-999)
+		getMinutes()	Get the minutes (0-59)
+		getMonth()	Get the month (0-11)
+		getSeconds()	Get the seconds (0-59)
+		getTime()	Get the time (milliseconds since January 1, 1970)
+
+		onblur
+		onchange
+		onfocus
+		onselect
+		onsubmit
+		onreset
+		onkeydown
+		onkeyup
+		onkeypress
+
+		*/
+
+		function getDate(){
+			var d = new Date();
+			document.getElementById('showDate').innerHTML = d;
+		}	
+
+		function submitForm(e){
+			e.preventDefault();
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+
+			console.log(email);
+		}
+
+		function test(){
+			alert('Change');
+		}
+
+		function init(){
+			console.log('Page Loaded');
+		}
+
+		document.getElementById('myForm').addEventListener('submit', submitForm, false);
+	
+        //arrow functions and normal functions example
+		const square = function (number){
+			return number * number;
+		}
+
+		//different way
+		const square_2 = (number) => {
+			return number*number;
+		}
+		console.log(square_2(2));
+	
+		//different way
+		const square_3 = number => number *number;
+
+		const jobs=[
+			{id: 1, isActive: true},
+			{id: 2, isActive: false},
+			{id: 3, isActive: true},
+		];
+		
+		const listActive=jobs.filter(function(job){ return job.isActive;})
+		const listActive2=jobs.filter((job) =>  job.isActive);
+
+
+
+        //objects
+        const animal1 ={
+            talk(){
+                setTimeout(function (){
+                    console.log('this', this);
+                }, 1000);
+            }
+        };
+
+        animal1.talk();
+
+        const animal ={
+            talk(){
+                var self = this;
+                setTimeout(function (){
+                    console.log('self', self);
+                }, 1000);
+            }
+        };
+
+        animal.talk();
+
+         //objects
+         const animal2 ={
+            talk(){
+                var self = this;
+                setTimeout(()=>{
+                    console.log('this', this);
+                }, 1000);
+            }
+        };
+        animal2.talk();
+
+        const colors=['red','blue','green'];
+        //MAP method
+
+        const items = colors.map((item)=>
+         '<li>'+item +'</li>'
+        );
+        console.log(items);
+
+        const items2 = colors.map((item)=>
+        `<li>${item}</li>`
+        );
+        console.log(items2);
+
+        const one=[1,2,3];
+        const two=[4,5,6];
+        //Spread operator - similar to concat
+        const cobmine = [...one,...two];
+        console.log(cobmine);
+
+        //classes
+        //inheretance
+</script>
+</body>
+</html>
