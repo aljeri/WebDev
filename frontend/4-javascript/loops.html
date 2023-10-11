@@ -5,6 +5,8 @@
 </head>
 <body>
 	<ul id="people"></ul>
+	<ul id="people2"></ul>
+
 	<script>
 	
 		for(i = 0;i < 10;i++){
@@ -48,8 +50,12 @@
 		for(var i = 0;i < people.length;i++){
 			document.getElementById('people').innerHTML += '<li>'+people[i].name+' - '+people[i].age+'</li>';
 		}
-
-
+		//easier way
+		const values = people.map((item)=>
+        `<li>${item.name} - ${item.age}</li>`
+        );
+		document.getElementById('people2').innerHTML=values.join('');
+		//join('') converts the array to a string, placing an empty string between each item (thus, no commas). 
 		var x = 25;
 		var y = 30;
 		var z = 10;

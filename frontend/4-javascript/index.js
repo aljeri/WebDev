@@ -18,8 +18,17 @@ function submited(){ //without form tag
     console.log(name.value, email.value);
 
 }
-//with form tag -
+//with form tag - eventlistener
 let forma= document.getElementById('myForm');
+/*forma.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let email= document.getElementById('email');
+    let name= document.getElementById('name');
+    console.log(email.value, name.value);
+    //confirm('thank you')
+    //forma.reset();
+
+});*/
 forma.addEventListener('submit', (e) => {
     e.preventDefault();
     let email= document.getElementById('email');

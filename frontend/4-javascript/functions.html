@@ -74,6 +74,7 @@
 
 			console.log(email);
 		}
+		document.getElementById('myForm').addEventListener('submit', submitForm, false);
 
 		function test(){
 			alert('Change');
@@ -83,31 +84,28 @@
 			console.log('Page Loaded');
 		}
 
-		document.getElementById('myForm').addEventListener('submit', submitForm, false);
 	
-        //arrow functions and normal functions example
+        // normal functions example
 		const square = function (number){
 			return number * number;
 		}
-
 		//different way
-		const square_2 = (number) => {
+		const square_2 = (number) => { //fat arrow => replaces normal function
 			return number*number;
 		}
 		console.log(square_2(2));
-	
 		//different way
 		const square_3 = number => number *number;
 
-		const jobs=[
-			{id: 1, isActive: true},
-			{id: 2, isActive: false},
-			{id: 3, isActive: true},
-		];
-		
-		const listActive=jobs.filter(function(job){ return job.isActive;})
-		const listActive2=jobs.filter((job) =>  job.isActive);
+		//function features
+		function sumAll() {
+          var total=0;
+          for (var i=0; i< sumAll.arguments.length; i++) 
+                total+=sumAll.arguments[i];
+          return(total); }
+        console.log(sumAll(1,2,3,4,5));
 
+	
 
 
         //objects
@@ -143,25 +141,7 @@
         };
         animal2.talk();
 
-        const colors=['red','blue','green'];
-        //MAP method
-
-        const items = colors.map((item)=>
-         '<li>'+item +'</li>'
-        );
-        console.log(items);
-
-        const items2 = colors.map((item)=>
-        `<li>${item}</li>`
-        );
-        console.log(items2);
-
-        const one=[1,2,3];
-        const two=[4,5,6];
-        //Spread operator - similar to concat
-        const cobmine = [...one,...two];
-        console.log(cobmine);
-
+      
         //classes
         //inheretance
 </script>
