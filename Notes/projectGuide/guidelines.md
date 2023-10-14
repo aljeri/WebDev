@@ -27,3 +27,10 @@ _Objective_: Understand the project's requirements, tools, and frameworks to des
 ***
 
 
+**Milestone 3: Database & Front-End Prototype** _(Due: Nov, 9)_ <br>
+_Objective_: Create the basic UI components based on the wireframes, utilize any content generator to fill out the website.
+
+1. Mock Data: Use static JSON files or JavaScript objects within your React components as placeholders for real data. This can simulate how your components will render actual data from a backend.
+2. Third-party Tools: There are tools and libraries like MirageJS. That allow you to mock API endpoints and simulate a backend server, making it easier to replicate real-world scenarios without a database.
+
+**Deliverable**: A document outlining the database design and a working prototype of the project.

@@ -97,12 +97,14 @@
 		//different way
 		const square_3 = number => number *number;
 
-		//function features
+		//function features:Variable number of arguments
+
 		function sumAll() {
           var total=0;
           for (var i=0; i< sumAll.arguments.length; i++) 
                 total+=sumAll.arguments[i];
-          return(total); }
+          return(total); 
+		}
         console.log(sumAll(1,2,3,4,5));
 
 	

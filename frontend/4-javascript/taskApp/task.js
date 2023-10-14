@@ -13,7 +13,6 @@ function addTask() {
     };
     
     // Append the new task to the task list and clear the input field
-    
     taskList.appendChild(newTask);
     taskInput.value = '';
 }

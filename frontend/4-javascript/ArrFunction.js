@@ -34,7 +34,7 @@ console.log(res);
 let res2= arr.reduce((addition,ele)=>{
     console.log(addition, ele);
     return addition+ele;
-},0); 
+},3); 
 console.log(res);
 
 
@@ -78,5 +78,6 @@ console.log(items2);
 const one=[1,2,3];
 const two=[4,5,6];
 //Spread operator - similar to concat
+
 const cobmine = [...one,...two];
 console.log(cobmine);

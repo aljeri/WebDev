@@ -9,7 +9,7 @@
    2.1. JavaScript<br>
    2.2. AJAX for dynamic data fetching
 3. Web Application Frameworks<br>
-   3.1. React (frontend)
+   3.1. React (frontend) <br>
    3.2. NodeJS (backend)<br>
    3.3. express.js (backend)<br>
 4. Web Databases<br>
