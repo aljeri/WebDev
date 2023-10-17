@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <h1> hello there</h1>
+    <script>
+       document.body.style.background='black';
+       document.body.style.color="white";
+       //window.navigator
+       console.log( window.location);
+       console.log(document.body);
+       console.log(document.head);
+
+       /*
+       fetch('https://reqres.in/api/users')
+       .then (res => console.log(res)) //complete response message
+        */
+
+       /*
+       fetch('https://reqres.in/api/users')
+       .then (res => res.json()) //return another promise
+       .then(data => console.log(data))
+        
+        */
+        /*
+        fetch('https://reqres.in/api/users/40') //request a user (fail 404)
+       .then (res => {
+            if (res.ok) { //returns 200 OK 
+                res.json()
+            }else{
+                console.log('error');
+            }
+            
+       })
+       .then( data => console.log(data))
+       */
+      
+       /*
+       fetch('https://reqres.in/api/users', {
+        method:'POST', //Create methodd
+        headers: {
+            'Content-type': 'applicatioin.json'
+        },
+        body: JSON.stringify({
+            name:' User 1'
+        })
+       })
+       .then (res =>{
+            return res.json()
+       })
+       .then(data=>console.log(data))
+
+       */
+      
+       /*
+       fetch('https://reqres.in/api/users/10', {
+        method:'PUT', //update methodd
+        headers: {
+            'Content-type': 'applicatioin.json'
+        },
+        body: JSON.stringify({
+            first_name:' User 1'
+        })
+       })
+       .then (res =>{
+            return res.json()
+       })
+       .then(data=>console.log(data))
+       */
+    </script>
+</body>
+</html>

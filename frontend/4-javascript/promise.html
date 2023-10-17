@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Promises in JS</h1>
+    <script>
+        let p = new Promise ((resolve, reject) => {
+            let a = 1+1 //(success) or a = 1+3 (failed)
+            if(a ==2){
+                resolve('success')
+            }else{
+                reject('failed')
+            }
+        })
+        p.then((message) =>{
+            console.log('Message: '+message)
+        }).catch((message)=>{
+            console.log('Message: '+message)
+        })
+
+
+    </script>
+</body>
+</html>

@@ -2,6 +2,9 @@
 const apiKey = 'YfjGhC4iGmKL15yAUQIjNe2Za9DdSehg';
 const baseUrl = 'http://dataservice.accuweather.com/locations/v1/cities/search?';
 const baseUrl2='http://dataservice.accuweather.com/currentconditions/v1/';
+
+//navigator.geolocation.getCurrentPosition(showPosition)
+
 document.getElementById('fetch-btn').addEventListener('click', function() {
     const city = document.getElementById('cityInput').value;
 

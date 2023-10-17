@@ -1,6 +1,7 @@
 document.write("<h1>Welcome, ",  visitor,  "</h1>");
 document.write("<h1 style='text-align: center;'>Hello World!!</h1>");
 
+
 function init(){
     console.log('Page Loaded');
 }
@@ -36,6 +37,8 @@ forma.addEventListener('submit', (e) => {
     console.log(email.value, name.value);
     //confirm('thank you')
     //forma.reset();
+    checklist = document.getElementById('check')
+    console.log(checklist.selectedIndex);
 
 });
 
