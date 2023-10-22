@@ -2,7 +2,7 @@
 
       setTimeout( function (){
         console.log('testing');
-    }, 10);
+    }, 1000);  //1000ms -> 1s
 //Set Interval: This will replace the element by Other after every specific interval. (Like a loop)
    /* let interval=2000;
     let i=0;

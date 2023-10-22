@@ -34,9 +34,9 @@ function render(){
     links = '';
     LinkList.forEach((ele)=>{
      if (ele.includes('https'))
-     links += `<li> <a target='_blank' href='${ele}'>${ele}</a></li>`
+     links += `<li> <img src='twitter.png' id='${ele}'> <a target='_blank' href='${ele}'>${ele}</a></li>`
     else
-    links += `<li> <a target='_blank' href='https://${ele}'>${ele}</a></li>`
+    links += `<li> <img src='twitter.png' id='${ele}'> <a target='_blank' href='https://${ele}'>${ele}</a></li>`
 
      }); 
     allList.innerHTML=links;
