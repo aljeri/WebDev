@@ -6,7 +6,7 @@ export default function MovieList() {
     <div>MovieList</div>
     <Link to='/movies/diehard'>Die Hard</Link>
     <br/>
-    <Link to='/movies/hello' state={{category: 'comedy'}}>Hello</Link>
+    <Link to='/movies/topgun' state={{category: 'Comedy'}}>Top Gun</Link>
     </>
   )
 }
