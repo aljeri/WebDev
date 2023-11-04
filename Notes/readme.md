@@ -1,6 +1,13 @@
 <b>Slides are divided based on each topic</b>
 
-<b>Tools:</b><br>
+<ul>
+ <li>0-Introduction</li>
+ <li>1-2-HTML concepts</li>
+ <li>3-CSS concepts</li>
+ <li>4-Bootstrap simplified</li>
+ <li>5-Javascript </li>
+ <li>6-React </li>
+</ul>
 <ul>
   <li>Download VSCode from <a href="https://code.visualstudio.com/ ">here</a>  </li>
   <li>Useful vscode extensions:
@@ -27,4 +34,9 @@
   <li><a href="https://www.figma.com/"> Figma </a></li>
   <li><a href="https://www.youtube.com/watch?v=c9Wg6Cb_YlU"> UI / UX Design Tutorial – Wireframe, Mockup & Design in Figma </a></li>
     <li><a href="https://youtu.be/HZuk6Wkx_Eg?si=VdcAj4Hm2H6CwpLN"> Figma Quick Beginners Guide</a></li>
+     <li><a href="https://react-bootstrap.netlify.app"> React Bootstrap</a></li>
+    <li><a href="https://miragejs.com"> Mirage JS - an API mocking library</a></li>
+
 </ul>
+
+

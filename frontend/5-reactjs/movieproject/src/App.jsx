@@ -7,24 +7,23 @@ import Movie from './pages/Movie'
 import Notfound from './pages/Notfound'
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import {Row, Container} from 'react-bootstrap'
+
 
 function App() {
   return(
     <Container>
-      <Row>
+      <Row className='col-md-12 d-none d-md-block bg-light sidebar'>
          <Navbar/>
       </Row>
-      <Row className='mt-4'>
+      <Row className='col-md-12 ml-sm-auto col-lg-12 px-2 py-4'>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/movies' element={<MovieList /> } />
+            <Route path='/movies' element={<MovieList  /> } />
             <Route path='/movies/:id' element={<Movie />} />
             <Route path="*" element={<Notfound/>} />
           </Routes>
-          </Row>
+        </Row>
     </Container>
   )
 }

@@ -27,7 +27,7 @@ _Objective_: Understand the project's requirements, tools, and frameworks to des
 ***
 
 
-**Milestone 3: Database & Front-End Prototype** _(Due: Nov, 9)_ <br>
+**Milestone 3: Database & Front-End Prototype** _(Due: Nov, 16)_ <br>
 _Objective_: Create the basic UI components based on the wireframes, utilize any content generator to fill out the website.
 
 1. Mock Data: Use static JSON files or JavaScript objects within your React components as placeholders for real data. This can simulate how your components will render actual data from a backend.
