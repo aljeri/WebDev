@@ -9,6 +9,10 @@ import Notfound from './pages/Notfound'
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Row, Container} from 'react-bootstrap'
 
+//Classwork: add delete fav
+//Classwork: connect each movie to movie.jsx? 
+// bonus: connect fav to localstorage
+//next class: add sign-in and registeration pages
 
 function App() {
   return(

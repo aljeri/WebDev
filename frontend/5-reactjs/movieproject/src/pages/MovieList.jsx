@@ -22,7 +22,7 @@ export default function MovieList() {
   }
   const addFavouriteMovie = (currentMovie) => {
 		const newFavouriteList = [...favourites, currentMovie];
-		setFavourites(newFavouriteList);
+		setFavourites((newFavouriteList));
 	};
 
   useEffect(()=>{
@@ -68,3 +68,7 @@ export default function MovieList() {
   )
 }
 
+
+//Link to 
+//Link replace
+//Link state={''}
