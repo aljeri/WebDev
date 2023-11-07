@@ -7,27 +7,28 @@ import Movie from './pages/Movie'
 import Notfound from './pages/Notfound'
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Row, Container} from 'react-bootstrap'
-
+import { Container} from 'react-bootstrap'
+import Register from './pages/register'
 //Classwork: add delete fav
 //Classwork: connect each movie to movie.jsx? 
-// bonus: connect fav to localstorage
-//next class: add sign-in and registeration pages
+//bonus: connect fav to localstorage
+//next class: add registeration and login pages
 
 function App() {
   return(
     <Container>
-      <Row className='col-md-12 d-none d-md-block bg-light sidebar'>
+      <div className='col-md-12 d-none d-md-block bg-light sidebar'>
          <Navbar/>
-      </Row>
-      <Row className='col-md-12 ml-sm-auto col-lg-12 px-2 py-4'>
+      </div>
+      <div className='col-md-12 ml-sm-auto col-lg-12 px-2 py-4'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/movies' element={<MovieList  /> } />
             <Route path='/movies/:id' element={<Movie />} />
+            <Route path='/register' element={<Register />}/>
             <Route path="*" element={<Notfound/>} />
           </Routes>
-        </Row>
+        </div>
     </Container>
   )
 }

@@ -46,7 +46,7 @@ export default function MovieList() {
       <div className='row justify-content-center'>
           { movies.map((movie, _) => (
             <div key={movie.imdbID} className='col-md-2 image-container d-flex justify-content-start m-3'>
-              <img style={{width:'100%'}}src={movie.Poster} alt='movie'></img>
+              <img style={{width:'100%'}}src={movie.Poster} alt='movie'/>
               <div onClick={() => addFavouriteMovie(movie)} className='overlay d-flex align-items-center justify-content-center'>
               <Favourites />
 					</div>
@@ -54,7 +54,7 @@ export default function MovieList() {
           ))}
       </div>
       <div className='row justify-content-center'>
-        <h3>Favourites:</h3>
+        <h3>Favorites:</h3>
         {
           favourites.map((fav,_) => (
             <div key={fav.imdbID} className='col-md-2 image-container d-flex justify-content-start m-2'>
@@ -72,3 +72,4 @@ export default function MovieList() {
 //Link to 
 //Link replace
 //Link state={''}
+//onClick={()=>navigate(`/movies/${movie.title}`,{ state: stateData })}/>
