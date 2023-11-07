@@ -5,11 +5,12 @@ import Button from 'react-bootstrap/Button'
 export default function Movie() {
   const {id} = useParams();
   const data= useLocation();
+  console.log(data)
   return (
     <Card style={{ width: '25rem', margin: '10px' }}>
     <div className="row">
       <div className="col-md-6">
-        <Card.Img variant="" src={`../src/assets/${id}.jpg`} />
+        <Card.Img variant="" src={data.state.Poster} />
       </div>
       <div className="col-md-6">
         <Card.Body>

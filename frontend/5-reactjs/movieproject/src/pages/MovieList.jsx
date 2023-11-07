@@ -1,15 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import '../App.css'
 import SearchBox from './SearchBox'
 import Favourites from './Favourites'
 import { useState, useEffect } from 'react';
+import DeleteFav from './Delete'
 
 export default function MovieList() {
   const [movies, setMovies]= useState([]);
   const [searchValue, setSearch]= useState('Ace');
   const [favourites, setFavourites] = useState([]);
-
+  const navigate = useNavigate()
   const fetchMovies = async(searchValue) =>{
     const url=`http://www.omdbapi.com/?s=${searchValue}&apikey=20c4daca`
     const response = await fetch(url);
@@ -24,6 +25,15 @@ export default function MovieList() {
 		const newFavouriteList = [...favourites, currentMovie];
 		setFavourites((newFavouriteList));
 	};
+  const DelFavouriteMovie =(currentMovie)=>{
+    const filtered=  favourites.filter((ele)=>
+    {
+        return (ele != currentMovie)
+    });
+    setFavourites(filtered);
+    
+  }
+
 
   useEffect(()=>{
      fetchMovies(searchValue);
@@ -46,7 +56,8 @@ export default function MovieList() {
       <div className='row justify-content-center'>
           { movies.map((movie, _) => (
             <div key={movie.imdbID} className='col-md-2 image-container d-flex justify-content-start m-3'>
-              <img style={{width:'100%'}}src={movie.Poster} alt='movie'/>
+              <img onClick={()=>navigate(`/movies/${movie.Title}`,{ state: movie })}
+              style={{width:'100%'}}src={movie.Poster} alt='movie'/>
               <div onClick={() => addFavouriteMovie(movie)} className='overlay d-flex align-items-center justify-content-center'>
               <Favourites />
 					</div>
@@ -59,6 +70,9 @@ export default function MovieList() {
           favourites.map((fav,_) => (
             <div key={fav.imdbID} className='col-md-2 image-container d-flex justify-content-start m-2'>
             <img style={{width:'100%'}}src={fav.Poster} alt='movie'></img>
+            <div onClick={() => DelFavouriteMovie(fav)} className='overlay d-flex align-items-center justify-content-center'>
+              <DeleteFav />
+					</div>
             </div>
           ))
         }

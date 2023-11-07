@@ -67,6 +67,7 @@ export default function Register() {
                 type='text' 
                 id='username' 
                 required
+                value={user}
                 autoComplete='off'
                 onChange={(e)=>setUser(e.target.value)}
                 aria-invalid={validName?'false':'true'}
@@ -118,13 +119,12 @@ export default function Register() {
 
 
         </form>
-        <p>
-                        Already registered?<br />
-                        <span className="line">
-                            {/*put router link here*/}
-                            <Link to='/signin'>Sign In</Link>
-                        </span>
-                    </p>
+        <p>  Already registered? 
+             <span className="line">
+                {/*put router link here*/}
+                <Link to='/signin'> Sign In</Link>
+            </span>
+        </p>
     </div>
      )}
     </>
