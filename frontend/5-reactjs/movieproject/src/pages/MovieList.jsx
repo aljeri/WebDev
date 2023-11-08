@@ -22,8 +22,10 @@ export default function MovieList() {
     }
   }
   const addFavouriteMovie = (currentMovie) => {
-		const newFavouriteList = [...favourites, currentMovie];
-		setFavourites((newFavouriteList));
+		const newlist= [...favourites, currentMovie]
+    setFavourites(newlist)
+		//another way
+    //setFavourites((oldfav)=>{ return ([...oldfav, currentMovie])});
 	};
   const DelFavouriteMovie =(currentMovie)=>{
     const filtered=  favourites.filter((ele)=>
