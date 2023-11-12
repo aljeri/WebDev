@@ -9,6 +9,7 @@ import Notfound from './pages/Notfound'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container} from 'react-bootstrap'
 import Register from './pages/register'
+import Login from './pages/Login'
 //Classwork: add delete fav
 //Classwork: connect each movie to movie.jsx? 
 //bonus: connect fav to localstorage
@@ -26,6 +27,7 @@ function App() {
             <Route path='/movies' element={<MovieList  /> } />
             <Route path='/movies/:id' element={<Movie />} />
             <Route path='/register' element={<Register />}/>
+            <Route path='/login' element={<Login/>} />
             <Route path="*" element={<Notfound/>} />
           </Routes>
         </div>

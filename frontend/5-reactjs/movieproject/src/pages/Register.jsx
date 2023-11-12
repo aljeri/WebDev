@@ -121,8 +121,7 @@ export default function Register() {
         </form>
         <p>  Already registered? 
              <span className="line">
-                {/*put router link here*/}
-                <Link to='/signin'> Sign In</Link>
+                <Link to='/login'> Sign In</Link>
             </span>
         </p>
     </div>
