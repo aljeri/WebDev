@@ -14,7 +14,7 @@ export default function SimpleComment({data, onUpdateLikes}) {
         <>
             <div className='row'>
                 <h3>Name: {data.author}</h3>
-                <p>Comment: {data.text}</p>
+                <p>Comment: {visible && data.text}</p>
                 <p><b>Likes:</b> {data.likes}</p>
                 <button onClick={()=>{visible?setVisible(false):setVisible(true)}}>{visible? 'hide':'show'}</button>
                 <button onClick={callliked} >{liked? 'dislike':'Like'}</button>

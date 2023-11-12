@@ -1,27 +1,33 @@
 import {  useState, useEffect, useContext } from 'react';
 import AuthContext from '../context/AuthProvider';
 import {Link} from 'react-router-dom'
-
+import '../App.css'
 const Login = () => {
+    
     const { setAuth } = useContext(AuthContext);
-   
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
     const [success, setSuccess] = useState(false);
     const [errMsg, setErrMsg]= useState('')
-   
+    useEffect(()=>{
+        setErrMsg('')   
+    },[user,pwd])
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
+            setErrMsg('No Server Response');
+
             //call API
             //console.log(JSON.stringify(response));
             //const accessToken = response?.data?.accessToken;
             //const roles = response?.data?.roles;
-            //setAuth({ user, pwd, roles, accessToken });
+            const roles=admin
+            const accessToken=1234
+            setAuth({ user, pwd, roles, accessToken });
             setUser('');
             setPwd('');
-            setSuccess(true);
+            //setSuccess(true);
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
