@@ -14,5 +14,7 @@
    3.1. React (frontend) <br>
       3.1.a my-app: components, functions, props <br>
       3.1.b hooks: useState, useEffect, .. <br>
-      3.1.c movieproject: react-Router, react-Bootstrap, useHistory, useLocation, useParams,
+      3.1.c movieproject: react-Router, react-Bootstrap, useHistory, useLocation, useParams,<br>
+      3.1.d user registration, login, authentication, context API<br>
+      3.1.e quiz 3 solution (my-app)
   
