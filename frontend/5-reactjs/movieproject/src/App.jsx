@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container} from 'react-bootstrap'
 import Register from './pages/register'
 import Login from './pages/Login'
+import Cart from './pages/Cart'
 //Classwork: add delete fav
 //Classwork: connect each movie to movie.jsx? 
 //bonus: connect fav to localstorage
@@ -19,7 +20,7 @@ function App() {
   return(
     <Container>
       <div className='col-md-12 d-none d-md-block bg-light sidebar'>
-         <Navbar/>
+         <Navbar />
       </div>
       <div className='col-md-12 ml-sm-auto col-lg-12 px-2 py-4'>
           <Routes>
@@ -28,6 +29,7 @@ function App() {
             <Route path='/movies/:id' element={<Movie />} />
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login/>} />
+            <Route path='/cart' element={<Cart/>}/>
             <Route path="*" element={<Notfound/>} />
           </Routes>
         </div>
