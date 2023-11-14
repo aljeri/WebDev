@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
-
+import CartContext from '../context/CartProvider';
+import { useContext } from 'react';
 export default function NavbarX() {
+  const {cartItem} = useContext(CartContext)
   const item={
     all: 'inherit'
   }
@@ -21,8 +22,12 @@ export default function NavbarX() {
         <Nav.Link as={Link} to="/movies" >Movies</Nav.Link>  
         </Nav>
         <Nav className='justify-content-end'>
+          <Nav.Link as={Link} to="/cart">
+           <i className="fa fa-shopping-cart"></i>
+           <span className='badge badge-warning' id='lblCartCount'> {cartItem.length} </span>
+          </Nav.Link>
         <Navbar.Text>
-            Signed in as: <a href="#">Tester</a>
+            <a href="#">Tester</a>
           </Navbar.Text>
         </Nav>
       </Navbar.Collapse>

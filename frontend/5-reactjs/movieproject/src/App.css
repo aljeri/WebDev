@@ -1,3 +1,5 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+
 #root {
   margin: 5px 5px;
   padding: 2rem;
@@ -25,8 +27,9 @@
 }
 
 .overlay {
-	position: absolute;
-  color: white;
+	position:absolute;
+	margin-left: 35%;
+  	color: white;
 	background: rgba(0, 0, 0, 0.8);
 	transition: 0.5s ease;
 	opacity: 0;
@@ -46,3 +49,28 @@
     padding: 0.5rem;
     margin-bottom: 0.5rem;
 }
+.badge {
+	padding-left: 9px;
+	padding-right: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+	background-color: #c67605;
+  }
+  #lblCartCount {
+	  font-size: 12px;
+	  background: #ff0000;
+	  color: #fff;
+	  padding: 0 5px;
+	  vertical-align: top;
+	  margin-left: -10px; 
+  }
+  .pr{
+	position:relative;
+	display: flex;
+
+  }

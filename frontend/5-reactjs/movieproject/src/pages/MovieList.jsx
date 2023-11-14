@@ -3,10 +3,13 @@ import {Link, useNavigate} from 'react-router-dom'
 import '../App.css'
 import SearchBox from './SearchBox'
 import Favourites from './Favourites'
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useContext } from 'react';
 import DeleteFav from './Delete'
+import CartContext from '../context/CartProvider';
 
 export default function MovieList() {
+  const { addCart } = useContext(CartContext);
+
   const [movies, setMovies]= useState([]);
   const [searchValue, setSearch]= useState('Ace');
   const [favourites, setFavourites] = useState([]);
@@ -63,6 +66,7 @@ export default function MovieList() {
               <div onClick={() => addFavouriteMovie(movie)} className='overlay d-flex align-items-center justify-content-center'>
               <Favourites />
 					</div>
+          <div onClick={()=>addCart(movie)}className='pr fa fa-shopping-cart'></div>
             </div>
           ))}
       </div>
