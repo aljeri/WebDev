@@ -2,8 +2,9 @@ import {  useState, useEffect, useContext } from 'react';
 import AuthContext from '../context/AuthProvider';
 import {Link} from 'react-router-dom'
 import '../App.css'
+//import {toast} from 'react-toastify'
 const Login = () => {
-    
+    const API_URL="http://localhost:8500/users"
     const { setAuth } = useContext(AuthContext);
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
@@ -14,20 +15,24 @@ const Login = () => {
     },[user,pwd])
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
-            setErrMsg('No Server Response');
-
-            //call API
-            //console.log(JSON.stringify(response));
-            //const accessToken = response?.data?.accessToken;
-            //const roles = response?.data?.roles;
-            const roles=admin
-            const accessToken=1234
-            setAuth({ user, pwd, roles, accessToken });
-            setUser('');
-            setPwd('');
-            //setSuccess(true);
+            //setup json-server with db.json dataset for testing
+            //call API: security concerns to be discussed later in the course
+            const response = await fetch(`${API_URL}?user=${user}&password=${pwd}`);
+            console.log(response)
+            const data= await response.json();
+            if (data.length > 0) {
+                const accessToken = data.accessToken;
+                const roles = data.roles;
+                setAuth({ user, pwd, roles, accessToken });
+                setUser('');
+                setPwd('');
+                //toast.success('you are logged in!');
+                setSuccess(true);
+            } else{
+                setErrMsg('Username or Password is incorrect!');
+            }
+            
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');

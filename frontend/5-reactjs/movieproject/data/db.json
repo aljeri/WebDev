@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "noura",
+      "username": "aljeri",
+      "password": 1234,
+      "email": "noura@emai.com",
+      "roles": "admin",
+      "accessToken": "3hghg9"
+    },
+    {
+      "id": "ayaa",
+      "password": "Aya@1234"
+    }
+  ]
+}

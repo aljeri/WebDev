@@ -3,8 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useState,useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom'
+import apiRequest from '../../apiRequests';
 const user_regex= /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const pwd_regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const API_URL="http://localhost:8500/users"
 
 
 export default function Register() {
@@ -38,13 +40,22 @@ export default function Register() {
     },[pwd,mpwd])
 
   
-    const handleRegister = (e) =>
+    const handleRegister = async (e) =>
     {
         e.preventDefault();
         //check with server if the entries are valid
         //check with server if user does not exist
         //check with server if information are saved
-        setSuccess(true);
+        const postOption = {
+            method:'POST',
+            headers: {
+                'Content-type':'application/json'
+            },
+            body: JSON.stringify({'id':user,'password':pwd})
+        }
+        const result= await apiRequest(API_URL, postOption);
+        if(result) setErr('Must use unique username');
+        else setSuccess(true);
         setUser('')
         setPwd('')
         setmPwd('')
@@ -58,8 +69,7 @@ export default function Register() {
         </div>
      ):(
      <div className='col-5 m-auto'>
-        {/*missing: handle server response error */}
-
+        <p  className={errMsg ? "errmsg" : "offscreen"} >{errMsg}</p>
         <h3>Register</h3>
         <form onSubmit={handleRegister}>
             <label htmlFor='username'>Username: </label>

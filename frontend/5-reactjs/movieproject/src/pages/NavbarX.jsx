@@ -5,9 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartContext from '../context/CartProvider';
+import AuthContext from '../context/AuthProvider';
 import { useContext } from 'react';
 export default function NavbarX() {
   const {cartItem} = useContext(CartContext)
+  const {auth} = useContext(AuthContext)
   const item={
     all: 'inherit'
   }
@@ -27,7 +29,7 @@ export default function NavbarX() {
            <span className='badge badge-warning' id='lblCartCount'> {cartItem.length} </span>
           </Nav.Link>
         <Navbar.Text>
-            <a href="#">Tester</a>
+            <a href="#">{auth.user? auth.user: 'GUEST'}</a>
           </Navbar.Text>
         </Nav>
       </Navbar.Collapse>
