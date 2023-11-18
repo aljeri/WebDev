@@ -22,6 +22,8 @@ export default function NavbarX() {
         <Nav className="me-auto">
         <Nav.Link as={Link} to="/" >Home</Nav.Link>  
         <Nav.Link as={Link} to="/movies" >Movies</Nav.Link>  
+        <Nav.Link as={Link} to="/admin" >Admin</Nav.Link>  
+
         </Nav>
         <Nav className='justify-content-end'>
           <Nav.Link as={Link} to="/cart">

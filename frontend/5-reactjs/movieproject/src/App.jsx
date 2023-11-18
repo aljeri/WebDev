@@ -2,19 +2,17 @@ import './App.css'
 import {Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import MovieList from './pages/MovieList.jsx'
-import Navbar from './pages/NavbarX'
+import Navbar from './components/NavbarX'
 import Movie from './pages/Movie'
 import Notfound from './pages/Notfound'
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container} from 'react-bootstrap'
-import Register from './pages/register'
+import Register from './pages/Register'
 import Login from './pages/Login'
 import Cart from './pages/Cart'
-//Classwork: add delete fav
-//Classwork: connect each movie to movie.jsx? 
-//bonus: connect fav to localstorage
-//next class: add registeration and login pages
+import RequiredAuth from './components/RequiredAuth'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   return(
@@ -30,6 +28,11 @@ function App() {
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login/>} />
             <Route path='/cart' element={<Cart/>}/>
+         
+            <Route element={<RequiredAuth checkRoles={["admin"]}/>} >
+              <Route path="/admin" element={<AdminPage/>} />
+            </Route>
+            
             <Route path="*" element={<Notfound/>} />
           </Routes>
         </div>

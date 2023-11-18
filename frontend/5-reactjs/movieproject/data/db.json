@@ -1,16 +1,22 @@
 {
   "users": [
     {
-      "id": "noura",
-      "username": "aljeri",
+      "id": "aljeri",
+      "username": "noura",
       "password": 1234,
       "email": "noura@emai.com",
-      "roles": "admin",
+      "roles": [
+        "admin"
+      ],
       "accessToken": "3hghg9"
-    },
+    }
+  ],
+  "movies": [
     {
-      "id": "ayaa",
-      "password": "Aya@1234"
+      "movieID": 1,
+      "name": "ACE VENTORA",
+      "Genre": "Comady",
+      "Year": 2000
     }
   ]
 }

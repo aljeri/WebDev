@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import '../App.css'
-import SearchBox from './SearchBox'
-import Favourites from './Favourites'
+import SearchBox from '../components/SearchBox'
+import Favourites from '../components/Favourites'
 import { useState, useEffect,useContext } from 'react';
-import DeleteFav from './Delete'
+import DeleteFav from '../components/Delete'
 import CartContext from '../context/CartProvider';
 
 export default function MovieList() {
