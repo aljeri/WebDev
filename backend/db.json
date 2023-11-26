@@ -1,0 +1,14 @@
+{
+    "Books":[
+    { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925, "genre": "Novel", "price": 10.99 },
+    { "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960, "genre": "Novel", "price": 8.99 },
+    { "title": "1984", "author": "George Orwell", "year": 1949, "genre": "Dystopian", "price": 9.99 },
+    { "title": "The Catcher in the Rye", "author": "J.D. Salinger", "year": 1951, "genre": "Novel", "price": 12.99 },
+    { "title": "Brave New World", "author": "Aldous Huxley", "year": 1932, "genre": "Dystopian", "price": 11.99 },
+    { "title": "Moby Dick", "author": "Herman Melville", "year": 1851, "genre": "Novel", "price": 14.99 },
+    { "title": "War and Peace", "author": "Leo Tolstoy", "year": 1869, "genre": "Novel", "price": 13.99 },
+    { "title": "Hamlet", "author": "William Shakespeare", "year": 1603, "genre": "Play", "price": 7.99 },
+    { "title": "The Odyssey", "author": "Homer", "year": -800, "genre": "Epic", "price": 15.99 },
+    { "title": "Madame Bovary", "author": "Gustave Flaubert", "year": 1856, "genre": "Novel", "price": 9.99 }
+]
+}
