@@ -1,32 +1,35 @@
 const express= require('express')
+//const {readFileSync} =require ('fs');
 const app=express()
 let{people}= require('./data')
+//const homePage= readFileSync('./public-methods/index.html')
 
 //static assets
 app.use(express.static('./public-methods'))
 //parse from data
 app.use(express.urlencoded({extended:false}))
+//parse json
+app.use(express.json())
+
 //read data (GET)
 app.get('/api/people',(req,res)=>{
     res.status(200).json({success: true, data:people})
     
 })
-
+//the below line help with fetching request body
 // (POST)
 app.post('/login',(req,res)=>{
-    console.log(req.body)
+    console.log("body: ", req.body)
     const {name}= req.body
     if(name){
         return res.status(200).send(`welcome ${name}`)
     }
     res.status(401).send('please provide data')
 })
-//parse json
-app.use(express.json())
 //POST for javascript
 app.post('/api/people',(req,res)=>{
-    console.log(req.body)
-    const {name}= req.body
+    console.log(req.query)
+    const {name}= req.query
     console.log(name)
     if(!name){
         return res
@@ -57,7 +60,6 @@ app.put('/api/people/:id',(req,res)=>{
 
 })
 //Delete data (DELETE)
-
 app.delete('/api/people/:id',(req,res)=>{
     const {id} = req.params;
     const person= people.find((person)=> person.id===Number(id))
